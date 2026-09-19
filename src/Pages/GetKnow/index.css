@@ -1,0 +1,83 @@
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  /* border: solid 5px blue ; */
+}
+
+.content h1 {
+  font-size: 4rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.conocenos-info-titulo{
+    color: rgb(108, 204, 240);
+    margin-top: 3rem;
+}
+
+
+@media (min-width: 768px) {
+
+    .content {
+        justify-content: start;
+        align-items: start;
+        margin-left: 2rem;
+    }
+
+
+}
+
+
+@media (min-width: 768px) {
+
+    .content h1 {
+        font-size: 4.5rem;
+    }
+    .content h2 {
+        font-size: 2.5rem;
+    }
+    .content p {
+        font-size: 2rem;
+    }
+
+}

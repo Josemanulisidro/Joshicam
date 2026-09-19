@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --BackgroundColorSpace:  rgb(10, 25, 49);
+    --BackgroundColorSecundarySpace: rgb(242, 245, 249);
+    --colorLettersTitle: white;
+    --colorLettersSubtitle: rgb(96, 117, 150);
+}
+
+.containerSpace{
+    background-color: var(--BackgroundColorSpace);
+}
+.containerSpaceSecundary{
+     background-color: var(--BackgroundColorSecundarySpace);
+}
+.containeSpaceTypografy{
+    color: var(--colorLettersTitle);
+}
+.containeSpaceTypografySubtitle{
+    color: var(--colorLettersSubtitle);
+}
