@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 import './services.css'
 import instalacion_9 from "../../../img/instalacion_9.WebP"
-import instalacion_10 from "../../../img/instalacion_10.WebP"
+import instalacion_16 from "../../../img/instalacion_16.WebP"
 import cercaElectrica_1 from "../../../img/cercaElectrica_1.jpg"
 import alarmas_1 from "../../../img/alarmas_1.jpg"
 
@@ -152,7 +152,7 @@ const Services = () =>{
             />
 
             <ServiceRow
-                image={instalacion_10}
+                image={instalacion_16}
                 alt="Servicios_portones"
                 title="Portones automáticos"
                 description="Motores para porteros corredizos, abatibles y seccionales con controles, tag y apertura desde app. Reparamos cualquier marca y automatizamos tu portón actual."
