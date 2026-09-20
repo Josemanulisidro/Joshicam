@@ -61,12 +61,12 @@ const ServiceRow = ({ image, alt, title, description, chips, imageFirst = true }
             >
                 <Grid size={12} sx={{ padding: "20px"}}>
                     <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
-                        <Typography variant="h3">{title}</Typography>
+                        <Typography variant="h3" sx={{textAlign:{xs: "center",sm: 'start', md:'start'}, fontSize: { xs:40, md: 48 } }}>{title}</Typography>
                     </motion.div>
                 </Grid>
                 <Grid size={12} sx={{ padding: "20px"}}>
                     <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
-                        <Typography variant="h5" sx={{margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                        <Typography variant="h5" sx={{margin: 2, lineHeight: 1.5,textAlign:{xs: "center",sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 } }} className="containeSpaceTypografySubtitle">
                             {description}
                         </Typography>
                     </motion.div>
@@ -74,15 +74,15 @@ const ServiceRow = ({ image, alt, title, description, chips, imageFirst = true }
 
                 <Grid size={12} sx={{ padding: "20px"}}>
                     <Grid container spacing={1} >
-                        <Grid size={{xs: 12, md:6}} sx={{display: 'flex', flexDirection: 'column', gap: 1,}} >
+                        <Grid size={{xs: 12, md:6}} sx={{display: 'flex', flexDirection: 'column', gap: 1, alignItems: {  xs: "center",md: "flex-start"} }} >
                             <motion.div variants={chipVariant}>
-                                <Chip icon={<CheckIcon sx={{ fontSize: 20,color: "#0055ff !important" }} />} label={chips[0]} sx={{height:40, padding: "10px"}} />
+                                <Chip icon={<CheckIcon sx={{ fontSize: 20,color: "#0055ff !important" }} />} label={chips[0]} sx={{height:40, padding: "10px", textAlign:{xs: "center",sm: 'start', md:'start'}}} />
                             </motion.div>
                             <motion.div variants={chipVariant}>
                                 <Chip icon={<CheckIcon sx={{ fontSize: 20, color: "#0055ff !important" }} />} label={chips[1]} sx={{height:40, padding: "10px"}} />
                             </motion.div>
                         </Grid>
-                        <Grid size={{xs: 12, md:6}} sx={{display: 'flex', flexDirection: 'column', gap: 1,}}>
+                        <Grid size={{xs: 12, md:6}} sx={{display: 'flex', flexDirection: 'column', gap: 1, alignItems: {  xs: "center",md: "flex-start"}}}>
                             <motion.div variants={chipVariant}>
                                 <Chip icon={<CheckIcon sx={{ fontSize: 20, color: "#0055ff !important" }} />} label={chips[2]} sx={{height:40, padding: "10px"}} />
                             </motion.div>
@@ -106,7 +106,7 @@ const ServiceRow = ({ image, alt, title, description, chips, imageFirst = true }
 const Services = () =>{
     return(
         <>
-            <Grid container spacing={5} sx={{mb: 5}} className="containerSpace">
+            <Grid container spacing={5} sx={{mb: {xs: 0, md: 3} }} className="containerSpace">
                 <Grid size={{xs: 12, md: 8}} sx={{ padding: "20px"}}>
                     <motion.div
                         initial="hidden"
@@ -114,17 +114,17 @@ const Services = () =>{
                         variants={staggerContainer}
                     >
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2}} className="containeSpaceTypografy">
+                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2, textAlign:{xs: "center", sm: 'start', md:'start'}}} className="containeSpaceTypografy">
                                 Servicios: venta, intalación y mantenimiento.
                             </Typography>
                         </motion.div>
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h3" sx={{margin: 2}} className="containeSpaceTypografy">
+                            <Typography variant="h3" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'}}} className="containeSpaceTypografy">
                                 Cuatro servicios, un solo proveedor de confianza.
                             </Typography>
                         </motion.div>
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 }}} className="containeSpaceTypografySubtitle">
                                 Cámaras, cercas electricas, portones automáticos y alarmas para casas, negocios y empresas, Equipos originales,
                                 instalación en 24 horas y garantia.
                             </Typography>
@@ -169,7 +169,7 @@ const Services = () =>{
                 imageFirst={true}
             />
 
-            <Grid container spacing={2} sx={{ mt: 5}} className="containerSpaceSecundary">
+            <Grid container spacing={2} sx={{mt: {xs: 0, md: 3} }} className="containerSpaceSecundary">
                 <Grid size={12} sx={{ padding: "20px"}}>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -177,7 +177,7 @@ const Services = () =>{
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Typography variant="h3">Así de fácil es protegerte</Typography>
+                        <Typography variant="h3" sx={{textAlign:{xs: "center",sm: 'start', md:'start'}, fontSize: { xs:40, md: 48 } }}>Así de fácil es protegerte</Typography>
                     </motion.div>
                 </Grid>
             </Grid>
@@ -310,10 +310,10 @@ const Services = () =>{
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Typography variant="h4" sx={{margin: 2}} className="containeSpaceTypografy">
+                        <Typography variant="h4" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'} }} className="containeSpaceTypografy">
                             ¿No sabes qué necesitas? Te diagnosticamos.
                         </Typography>
-                        <Typography variant="h5" sx={{margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                        <Typography variant="h5" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center",sm: 'start', md:'start'} }} className="containeSpaceTypografySubtitle">
                             Atención de 8am a 9pm - Intalación en 24 horas - garantía.
                         </Typography>
                     </motion.div>
@@ -332,8 +332,8 @@ const Services = () =>{
                                 startIcon={<ChatIcon />}
                                 sx={{
                                     margin: 2,
-                                    padding: "12px 30px",
-                                    fontSize: "1rem",
+                                    padding: { xs: "8px 16px", sm: "10px 20px", md: "12px 30px", },
+                                    fontSize: {xs:'0.8rem', sm: '0.9rem', md: '1rem' },
                                     fontWeight: 600,
                                     borderRadius: "30px",
                                     textTransform: "none",
@@ -346,8 +346,8 @@ const Services = () =>{
                             <Button variant="outlined"
                                 sx={{
                                         margin: 2,
-                                        padding: "12px 30px",
-                                        fontSize: "1rem",
+                                        padding: { xs: "8px 16px", sm: "10px 20px", md: "12px 30px", },
+                                        fontSize: {xs:'0.8rem', sm: '0.9rem', md: '1rem' },
                                         fontWeight: 600,
                                         borderRadius: "30px",
                                         textTransform: "none",

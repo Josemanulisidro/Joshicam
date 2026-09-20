@@ -7,12 +7,16 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
+import logo from "../../../img/logo.jpeg";
+
+
 const NAV_LINKS = [
   { label: "Inicio", to: "/" },
   { label: "Servicios", to: "/services" },
   { label: "Soluciones", to: "/solutions" },
   { label: "Contacto", to: "/GetKnow" },
 ];
+
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -31,6 +35,8 @@ const Footer = () => {
           {/* Logo / descripción */}
           <Grid size={{ xs: 12, md: 4 }}>
             <Box
+            component="img"
+            src={logo}
               sx={{
                 width: 48,
                 height: 48,
@@ -45,9 +51,7 @@ const Footer = () => {
                 letterSpacing: -1,
                 mb: 2,
               }}
-            >
-              L
-            </Box>
+            ></Box>
             <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.7, maxWidth: 320 }}>
               Soluciones avanzadas en videovigilancia, automatización de accesos y porteros digitales para proteger lo que más importa.
             </Typography>
@@ -151,7 +155,7 @@ const Footer = () => {
               <Box sx={{ display: "flex", alignItems: "flex-start", gap: 1 }}>
                 <LocationOnIcon fontSize="small" sx={{ color: "primary.main", mt: "2px" }} />
                 <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
-                  Querétaro, México
+                  Lagunilla Hgo, México
                 </Typography>
               </Box>
             </Box>
@@ -172,7 +176,7 @@ const Footer = () => {
           }}
         >
           <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.6)" }}>
-            © {year} Tu Empresa. Todos los derechos reservados.
+            © {year} Joshicamp. Todos los derechos reservados.
           </Typography>
           <Box sx={{ display: "flex", gap: 2 }}>
             <MuiLink

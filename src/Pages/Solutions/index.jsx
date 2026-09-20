@@ -36,7 +36,7 @@ const cardVariant = {
 
 // Encabezado de sección reutilizable (título + descripción) con animación en cascada
 const SectionHeader = ({ title, description }) => (
-    <Grid container spacing={2} sx={{}}>
+    <Grid container spacing={2} >
         <Grid size={12} sx={{ padding: "20px"}}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ const SectionHeader = ({ title, description }) => (
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5 }}
             >
-                <Typography variant="h3">{title}</Typography>
+                <Typography variant="h3" sx={{ margin: 0, textAlign:{xs: "center"}, fontSize: { xs:40, md: 48 } }}>{title}</Typography>
             </motion.div>
         </Grid>
         <Grid size={12} sx={{ padding: "20px"}}>
@@ -54,7 +54,7 @@ const SectionHeader = ({ title, description }) => (
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
             >
-                <Typography variant="h5" sx={{margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                <Typography variant="h5" sx={{margin: 0, lineHeight: 1.5, textAlign:{xs: "center"}}} className="containeSpaceTypografySubtitle">
                     {description}
                 </Typography>
             </motion.div>
@@ -65,7 +65,7 @@ const SectionHeader = ({ title, description }) => (
 const Solutions = () =>{
     return(
         <>
-            <Grid container spacing={5} sx={{mb: 5}} className="containerSpace">
+            <Grid container spacing={5} sx={{ mb: {xs: 0, md: 3} }} className="containerSpace">
                 <Grid size={{xs: 12, md: 8}} sx={{ padding: "20px"}}>
                     <motion.div
                         initial="hidden"
@@ -73,17 +73,17 @@ const Solutions = () =>{
                         variants={staggerContainer}
                     >
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2}} className="containeSpaceTypografy">
+                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'} }} className="containeSpaceTypografy">
                                 Soluciones, Hogar, negocio y empresas.
                             </Typography>
                         </motion.div>
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h3" sx={{margin: 2}} className="containeSpaceTypografy">
+                            <Typography variant="h3" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'} }} className="containeSpaceTypografy">
                                 Paquetes armados según lo que proteges.
                             </Typography>
                         </motion.div>
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 } }} className="containeSpaceTypografySubtitle">
                                 Diseñamos la solución completa para tu casa, tu local o tu planta, Elige tu perfil y cotiza en un clic.
                             </Typography>
                         </motion.div>
@@ -694,10 +694,10 @@ const Solutions = () =>{
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Typography variant="h4" sx={{margin: 2}} className="containeSpaceTypografy">
+                        <Typography variant="h4" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'}}} className="containeSpaceTypografy">
                             Cuéntanos qué proteges y te armamos la solucuón hoy.
                         </Typography>
-                        <Typography variant="h5" sx={{margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                        <Typography variant="h5" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center",sm: 'start', md:'start'}}} className="containeSpaceTypografySubtitle">
                             Atención de 8am a 9pm - Intalación en 24 horas - garantía.
                         </Typography>
                     </motion.div>
@@ -716,8 +716,8 @@ const Solutions = () =>{
                                 startIcon={<ChatIcon />}
                                 sx={{
                                     margin: 2,
-                                    padding: "12px 30px",
-                                    fontSize: "1rem",
+                                    padding: { xs: "8px 16px", sm: "10px 20px", md: "12px 30px", },
+                                    fontSize: {xs:'0.8rem', sm: '0.9rem', md: '1rem' },
                                     fontWeight: 600,
                                     borderRadius: "30px",
                                     textTransform: "none",
@@ -730,8 +730,8 @@ const Solutions = () =>{
                             <Button variant="outlined"
                                 sx={{
                                         margin: 2,
-                                        padding: "12px 30px",
-                                        fontSize: "1rem",
+                                        padding: { xs: "8px 16px", sm: "10px 20px", md: "12px 30px", },
+                                        fontSize: {xs:'0.8rem', sm: '0.9rem', md: '1rem' },
                                         fontWeight: 600,
                                         borderRadius: "30px",
                                         textTransform: "none",

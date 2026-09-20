@@ -39,28 +39,29 @@ const cardVariant = {
 const Home = () =>{
     return(
         <>
-            <Grid container spacing={5} sx={{mb: 5}} className="containerSpace">
+            <Grid container spacing={5} sx={{mb: {xs: 0, md: 3} }} className="containerSpace">
 
                 <Grid size={{xs: 12, sm: 12, md: 6}} sx={{ padding: "20px"}}>
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
+                        style={{ width: "100%" }}
                     >
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2}} className="containeSpaceTypografy">
+                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2, textAlign: { xs: "center", sm: 'start', md:'start'} }} className="containeSpaceTypografy">
                                 SEGURIDAD INTELIGENTE
                             </Typography>
                         </motion.div>
 
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h3" sx={{margin: 2}} className="containeSpaceTypografy">
+                            <Typography variant="h3" sx={{margin: 2, textAlign: { xs: "center",sm: 'start', md:'start' } }} className="containeSpaceTypografy">
                                 Tu seguridad, Nuestra Prioridad.
                             </Typography>
                         </motion.div>
 
                         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5, textAlign: { xs: "center",sm: 'start', md:'start' }, fontSize: { xs:25, sm: 32 } }} className="containeSpaceTypografySubtitle">
                                 Soluciones avanzadas en camámaras de seguridad, cercas elécticas, portones automáticos y alarmas. Vedemos, instalamos y damos mantenimiento.
                             </Typography>
                         </motion.div>
@@ -72,8 +73,8 @@ const Home = () =>{
                                         startIcon={<SecurityIcon />}
                                         sx={{
                                             margin: 2,
-                                            padding: "12px 30px",
-                                            fontSize: "1rem",
+                                            padding: { xs: "8px 16px", sm: "10px 20px", md: "12px 30px", },
+                                            fontSize: {xs:'0.8rem', sm: '0.9rem', md: '1rem' },
                                             fontWeight: 600,
                                             borderRadius: "30px",
                                             textTransform: "none",
@@ -87,8 +88,8 @@ const Home = () =>{
                                         sx={{
                                             margin: 2,
                                             padding: "12px 30px",
-                                            fontSize: "1rem",
-                                            fontWeight: 600,
+                                            padding: { xs: "8px 16px", sm: "10px 20px", md: "12px 30px", },
+                                            fontSize: {xs:'0.8rem', sm: '0.9rem', md: '1rem' },
                                             borderRadius: "30px",
                                             textTransform: "none",
                                             backgroundColor: "#22C15E",
@@ -111,7 +112,7 @@ const Home = () =>{
                 </Grid>
 
             </Grid>
-            <Grid container spacing={2} sx={{mb: 5, mt: 5}}>
+            <Grid container spacing={2} sx={{mb: {xs: 0, md: 3}}}>
 
                 <Grid size={12} sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                     <motion.div
@@ -120,7 +121,7 @@ const Home = () =>{
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Typography variant="h3">Nuestros servicios</Typography>
+                        <Typography variant="h3" sx={{textAlign: { xs: "center"}, fontSize: { xs:40, md: 48 } }}>Nuestros servicios</Typography>
                     </motion.div>
                 </Grid>
                 <Grid size={12} sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -130,7 +131,7 @@ const Home = () =>{
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <Typography variant="h5" className="containeSpaceTypografySubtitle">Tecnología de vanguardia para cada necesidad de protección.</Typography>
+                        <Typography variant="h5" sx={{textAlign:{xs: "center"} }} className="containeSpaceTypografySubtitle">Tecnología de vanguardia para cada necesidad de protección.</Typography>
                     </motion.div>
                 </Grid>
 
@@ -221,7 +222,7 @@ const Home = () =>{
                 </Grid>
             </motion.div>
 
-            <Grid container spacing={2} sx={{ mt: 5}} className="containerSpaceSecundary">
+            <Grid container spacing={2} sx={{ mt: {xs: 0, md: 3 }}} className="containerSpaceSecundary">
 
                 <Grid size={{xs: 12, sm: 12, md: 5}} sx={{ padding: "40px" }}>
                     <motion.div
@@ -241,10 +242,10 @@ const Home = () =>{
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6, delay: 0.15 }}
                     >
-                        <Typography variant="h3" sx={{margin: 2}}>
+                        <Typography variant="h3" sx={{margin: 2, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:40, md: 48 } }}>
                             Soluciones integrales para tu seguridad
                         </Typography>
-                        <Typography variant="h4" sx={{ margin: 2, lineHeight: 1.5}} className="containeSpaceTypografySubtitle">
+                        <Typography variant="h4" sx={{ margin: 2, lineHeight: 1.5, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 }}} className="containeSpaceTypografySubtitle">
                             Diseñamos ecosisitemas  de protección integrales, combinando cámaras de seguridad, portones automáticos y video porteros para una vigilancia completa y control de accesos eficiente.
                         </Typography>
                     </motion.div>
