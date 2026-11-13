@@ -10,6 +10,7 @@ import instalcion_13 from "../../../img/instalacion_13.jpg"
 import instalcion_6 from "../../../img/instalacion_6.WebP"
 import instalacion_11 from "../../../img/instalacion_11.WebP"
 import industria from "../../../img/industria.jpg"
+import paquetesFondo from "../../../img/paquetes-Fondo.svg"
  
 
 import './solutions.css'
@@ -65,31 +66,56 @@ const SectionHeader = ({ title, description }) => (
 const Solutions = () =>{
     return(
         <>
-            <Grid container spacing={5} sx={{ mb: {xs: 0, md: 3} }} className="containerSpace">
-                <Grid size={{xs: 12, md: 8}} sx={{ padding: "20px"}}>
-                    <motion.div
-                        initial="hidden"
-                        animate="visible"
-                        variants={staggerContainer}
-                    >
-                        <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'} }} className="containeSpaceTypografy">
-                                Soluciones, Hogar, negocio y empresas.
-                            </Typography>
+            <Box
+                className="containerSpace"
+                sx={{
+                    position: "relative",
+                    overflow: "hidden",
+                    mb: { xs: 0, md: 3 },
+                    minHeight: { xs: 640, md: 520 },
+                    display: "flex",
+                    alignItems: { xs: "flex-start", md: "center" },
+
+                    // Ilustración de fondo
+                    backgroundImage: `url(${paquetesFondo})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: { xs: "auto 70%", md: "cover" },
+                    backgroundPosition: { xs: "right bottom", md: "right center" },
+
+                    // Capa oscura para que el texto se lea
+                    "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    inset: 0,
+                    background: {
+                        xs: "linear-gradient(180deg, rgba(10,25,49,0.95) 0%, rgba(10,25,49,0.75) 40%, rgba(10,25,49,0) 70%)",
+                        md: "linear-gradient(90deg, rgba(10,25,49,0.95) 0%, rgba(10,25,49,0.85) 42%, rgba(10,25,49,0) 66%)",
+                    },
+                    zIndex: 0,
+                    },
+                }}
+            >
+                <Grid container spacing={5} sx={{ position: "relative", zIndex: 1, width: "100%" }} >
+                    <Grid size={{xs: 12, md: 8}} sx={{ padding: "20px"}}>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants={staggerContainer}
+                        >
+                            <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
+                                <Typography variant="h3" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'} }} className="containeSpaceTypografy">
+                                    Paquetes armados según lo que proteges.
+                                </Typography>
+                            </motion.div>
+                            <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
+                                <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 } }} className="containeSpaceTypografySubtitle">
+                                    Diseñamos la solución completa para tu casa, tu local o tu planta, Elige tu perfil y cotiza en un clic.
+                                </Typography>
+                            </motion.div>
                         </motion.div>
-                        <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h3" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'} }} className="containeSpaceTypografy">
-                                Paquetes armados según lo que proteges.
-                            </Typography>
-                        </motion.div>
-                        <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 } }} className="containeSpaceTypografySubtitle">
-                                Diseñamos la solución completa para tu casa, tu local o tu planta, Elige tu perfil y cotiza en un clic.
-                            </Typography>
-                        </motion.div>
-                    </motion.div>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </Box>
 
             <SectionHeader
                 title="Para tu hogar"

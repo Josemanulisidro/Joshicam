@@ -9,6 +9,7 @@ import instalacion_9 from "../../../img/instalacion_9.WebP"
 import instalacion_16 from "../../../img/instalacion_16.WebP"
 import cercaElectrica_1 from "../../../img/cercaElectrica_1.jpg"
 import alarmas_1 from "../../../img/alarmas_1.jpg"
+import serviciosFondo from "../../../img/servicios-fondo.svg"
 
 // Variants reutilizables para las animaciones
 const fadeUp = {
@@ -106,32 +107,57 @@ const ServiceRow = ({ image, alt, title, description, chips, imageFirst = true }
 const Services = () =>{
     return(
         <>
-            <Grid container spacing={5} sx={{mb: {xs: 0, md: 3} }} className="containerSpace">
-                <Grid size={{xs: 12, md: 8}} sx={{ padding: "20px"}}>
-                    <motion.div
-                        initial="hidden"
-                        animate="visible"
-                        variants={staggerContainer}
-                    >
-                        <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="subtitle2" sx={{color: "blue", margin: 2, textAlign:{xs: "center", sm: 'start', md:'start'}}} className="containeSpaceTypografy">
-                                Servicios: venta, intalación y mantenimiento.
-                            </Typography>
+            <Box
+                className="containerSpace"
+                sx={{
+                    position: "relative",
+                    overflow: "hidden",
+                    mb: { xs: 0, md: 3 },
+                    minHeight: { xs: 640, md: 520 },
+                    display: "flex",
+                    alignItems: { xs: "flex-start", md: "center" },
+
+                    // Ilustración de fondo
+                    backgroundImage: `url(${serviciosFondo})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: { xs: "88% bottom", md: "right center" },
+
+                    // Capa oscura para que el texto se lea
+                    "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    inset: 0,
+                    background: {
+                        xs: "linear-gradient(180deg, rgba(10,25,49,0.95) 0%, rgba(10,25,49,0.8) 45%, rgba(10,25,49,0.1) 100%)",
+                        md: "linear-gradient(90deg, rgba(10,25,49,0.95) 0%, rgba(10,25,49,0.85) 45%, rgba(10,25,49,0) 68%)",
+                    },
+                    zIndex: 0,
+                    },
+                }}
+            >
+                <Grid container spacing={5} sx={{ position: "relative", zIndex: 1, width: "100%" }}>
+                    <Grid size={{xs: 12, md: 8}} sx={{ padding: "20px"}}>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants={staggerContainer}
+                        >
+                            <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
+                                <Typography variant="h3" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'}}} className="containeSpaceTypografy">
+                                    Cuatro servicios, un solo proveedor de confianza.
+                                </Typography>
+                            </motion.div>
+                            <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
+                                <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 }}} className="containeSpaceTypografySubtitle">
+                                    Cámaras, cercas electricas, portones automáticos y alarmas para casas, negocios y empresas, Equipos originales,
+                                    instalación en 24 horas y garantia.
+                                </Typography>
+                            </motion.div>
                         </motion.div>
-                        <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h3" sx={{margin: 2, textAlign:{xs: "center",sm: 'start', md:'start'}}} className="containeSpaceTypografy">
-                                Cuatro servicios, un solo proveedor de confianza.
-                            </Typography>
-                        </motion.div>
-                        <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-                            <Typography variant="h4" sx={{margin: 2, lineHeight: 1.5, textAlign:{xs: "center", sm: 'start', md:'start'}, fontSize: { xs:25, sm: 32 }}} className="containeSpaceTypografySubtitle">
-                                Cámaras, cercas electricas, portones automáticos y alarmas para casas, negocios y empresas, Equipos originales,
-                                instalación en 24 horas y garantia.
-                            </Typography>
-                        </motion.div>
-                    </motion.div>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </Box>
 
             <ServiceRow
                 image={instalacion_9}
