@@ -10,7 +10,7 @@ import instalcion_13 from "../../../img/instalacion_13.jpg"
 import instalcion_6 from "../../../img/instalacion_6.WebP"
 import instalacion_11 from "../../../img/instalacion_11.WebP"
 import industria from "../../../img/industria.jpg"
-import paquetesFondo from "../../../img/paquetes-Fondo.svg"
+import paquetesFondo from "../../../img/paquetes-fondo.svg"
  
 
 import './solutions.css'
